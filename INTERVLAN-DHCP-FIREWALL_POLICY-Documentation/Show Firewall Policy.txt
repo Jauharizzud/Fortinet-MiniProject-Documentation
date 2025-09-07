@@ -1,0 +1,57 @@
+# Device Name: Fortigate
+# Location: GNS3
+# Date: 07 September 2025
+# Engineer: SolveNet
+# Description: Show firewall policy
+
+!===========================!
+!       CONFIGURATION       !
+!===========================!
+
+
+config firewall policy
+    edit 1
+        set uuid e26ae88c-8b3d-51f0-f3f6-7ebbb7bda099
+        set srcintf "VLAN10"
+        set dstintf "VLAN10"
+        set srcaddr "all"
+        set dstaddr "all"
+        set action accept
+        set schedule "always"
+        set service "ALL"
+        set logtraffic disable
+    next
+    edit 2
+        set uuid 1edcf77e-8b3e-51f0-ba63-41c1e4fa70c4
+        set srcintf "vlan20"
+        set dstintf "vlan20"
+        set srcaddr "all"
+        set dstaddr "all"
+        set action accept
+        set schedule "always"
+        set service "ALL"
+        set logtraffic disable
+    next
+    edit 10
+        set uuid c1fd9fe8-8bc1-51f0-cd48-74b06144784f
+        set srcintf "VLAN10"
+        set dstintf "vlan20"
+        set srcaddr "all"
+        set dstaddr "all"
+        set action accept
+        set schedule "always"
+        set service "ALL"
+        set logtraffic disable
+    next
+    edit 20
+        set uuid df0545fa-8bc1-51f0-c3f7-6af9351f3990
+        set srcintf "vlan20"
+        set dstintf "VLAN10"
+        set srcaddr "all"
+        set dstaddr "all"
+        set action accept
+        set schedule "always"
+        set service "ALL"
+        set logtraffic disable
+    next
+end
