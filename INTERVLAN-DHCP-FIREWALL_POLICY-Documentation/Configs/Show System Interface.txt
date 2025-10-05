@@ -101,3 +101,7 @@ config system interface
         set vlanid 20
     next
 end
+
+!===========================!
+!      END OF CONFIG        !
+!===========================!
