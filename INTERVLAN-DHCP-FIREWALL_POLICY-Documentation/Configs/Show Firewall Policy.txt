@@ -55,3 +55,7 @@ config firewall policy
         set logtraffic disable
     next
 end
+
+!===========================!
+!      END OF CONFIG        !
+!===========================!
