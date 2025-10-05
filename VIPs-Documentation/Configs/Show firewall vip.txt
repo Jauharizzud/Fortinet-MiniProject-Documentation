@@ -1,0 +1,25 @@
+# Device Name: Fortigate
+# Location: GNS3
+# Date: 05 Oktober 2025
+# Engineer: SolveNet
+# Description: Show firewall vip
+
+!===========================!
+!       CONFIGURATION       !
+!===========================!
+
+config firewall vip
+    edit "VIPs-Mikrotik"
+        set uuid 726095fa-a145-51f0-28de-e7b618ec4039
+        set extip 192.168.0.169
+        set mappedip "172.16.100.1"
+        set extintf "port10"
+        set portforward enable
+        set extport 80
+        set mappedport 80
+    next
+end
+
+!===========================!
+!      END OF CONFIG        !
+!===========================!

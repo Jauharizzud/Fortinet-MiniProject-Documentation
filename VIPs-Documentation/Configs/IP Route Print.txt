@@ -1,0 +1,20 @@
+# Device Name: Mikrotik
+# Location: GNS3
+# Date: 05 Oktober 2025
+# Engineer: SolveNet
+# Description: IP Route Print
+
+!===========================!
+!       CONFIGURATION       !
+!===========================!
+
+Flags: X - disabled, A - active, D - dynamic,
+C - connect, S - static, r - rip, b - bgp, o - ospf, m - mme,
+B - blackhole, U - unreachable, P - prohibit
+ #      DST-ADDRESS        PREF-SRC        GATEWAY            DISTANCE
+ 0 A S  0.0.0.0/0                          172.16.100.254            1
+ 1 ADC  172.16.100.0/24    172.16.100.1    ether1                    0
+
+!===========================!
+!      END OF CONFIG        !
+!===========================!

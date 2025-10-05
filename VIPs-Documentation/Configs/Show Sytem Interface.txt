@@ -1,0 +1,112 @@
+# Device Name: Fortigate
+# Location: GNS3
+# Date: 05 Oktober 2025
+# Engineer: SolveNet
+# Description: Show system interface
+
+!===========================!
+!       CONFIGURATION       !
+!===========================!
+
+config system interface
+    edit "port1"
+        set vdom "root"
+        set ip 172.16.100.254 255.255.255.0
+        set allowaccess ping https ssh http fgfm
+        set type physical
+        set alias "Connect to Mikrotik"
+        set role dmz
+        set snmp-index 1
+    next
+    edit "port2"
+        set vdom "root"
+        set ip 192.168.10.254 255.255.255.0
+        set allowaccess ping https ssh snmp fgfm
+        set type physical
+        set alias "Connect to Client"
+        set device-identification enable
+        set lldp-transmission enable
+        set role lan
+        set snmp-index 2
+    next
+    edit "port3"
+        set vdom "root"
+        set type physical
+        set snmp-index 3
+    next
+    edit "port4"
+        set vdom "root"
+        set type physical
+        set snmp-index 4
+    next
+    edit "port5"
+        set vdom "root"
+        set type physical
+        set snmp-index 5
+    next
+    edit "port6"
+        set vdom "root"
+        set type physical
+        set snmp-index 6
+    next
+    edit "port7"
+        set vdom "root"
+        set type physical
+        set snmp-index 7
+    next
+    edit "port8"
+        set vdom "root"
+        set type physical
+        set snmp-index 8
+    next
+    edit "port9"
+        set vdom "root"
+        set type physical
+        set snmp-index 9
+    next
+    edit "port10"
+        set vdom "root"
+        set ip 192.168.0.162 255.255.255.0
+        set allowaccess ping https ssh http fgfm
+        set type physical
+        set snmp-index 10
+        set secondary-IP enable
+        config secondaryip
+            edit 1
+                set ip 192.168.0.169 255.255.255.0
+                set allowaccess ping https http fgfm
+            next
+        end
+    next
+    edit "naf.root"
+        set vdom "root"
+        set type tunnel
+        set src-check disable
+        set snmp-index 11
+    next
+    edit "l2t.root"
+        set vdom "root"
+        set type tunnel
+        set snmp-index 12
+    next
+    edit "ssl.root"
+        set vdom "root"
+        set type tunnel
+        set alias "SSL VPN interface"
+        set snmp-index 13
+    next
+    edit "fortilink"
+        set vdom "root"
+        set fortilink enable
+        set ip 10.255.1.1 255.255.255.0
+        set allowaccess ping fabric
+        set type aggregate
+        set lldp-reception enable
+        set lldp-transmission enable
+        set snmp-index 14
+    next
+end
+
+!===========================!
+!      END OF CONFIG        !
+!===========================!

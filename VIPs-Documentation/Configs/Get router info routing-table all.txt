@@ -1,0 +1,26 @@
+# Device Name: Fortigate
+# Location: GNS3
+# Date: 05 Oktober 2025
+# Engineer: SolveNet
+# Description: Get router info routing-table all
+
+!===========================!
+!       CONFIGURATION       !
+!===========================!
+
+Codes: K - kernel, C - connected, S - static, R - RIP, B - BGP
+       O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       * - candidate default
+
+Routing table for VRF=0
+C       172.16.100.0/24 is directly connected, port1
+C       192.168.0.0/24 is directly connected, port10
+C       192.168.10.0/24 is directly connected, port2
+
+
+!===========================!
+!      END OF CONFIG        !
+!===========================!
